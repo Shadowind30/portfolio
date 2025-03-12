@@ -1,5 +1,12 @@
 <template>
-  <Menubar :model="items" />
+  <Menubar :model="items">
+    <template #start>
+      <h1>Portfolio</h1>
+    </template>
+    <template #end>
+      <Button icon="pi pi-palette"></Button>
+    </template>
+  </Menubar>
 </template>
 
 <script lang="ts" setup>
@@ -16,7 +23,7 @@ const items = ref([
   },
   {
     label: 'Contact',
-    icon: 'pi pi-main',
+    icon: 'pi pi-mail',
   },
 ])
 </script>
